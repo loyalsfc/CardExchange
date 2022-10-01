@@ -32,8 +32,8 @@ function Testimonial(){
     return(
         <section className="py-8">
             <div className="container mx-auto">
-                <h2 className="text-3xl sm:text-4xl mb-4 text-center font-bold leading-[150%] w-3/4 mx-auto text-white">Testimonials</h2>
-                <div className='mx-auto m-w-[1000px] relative'>
+                <h2 data-aos="slide-down" className="text-3xl sm:text-4xl mb-4 text-center font-bold leading-[150%] w-3/4 mx-auto text-white">Testimonials</h2>
+                <div data-aos="flip-up" className='mx-auto m-w-[1000px] relative'>
                     <Testimony
                         block=""
                         name="Olumide Johnson"

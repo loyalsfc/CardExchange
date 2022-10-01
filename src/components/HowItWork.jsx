@@ -43,12 +43,12 @@ function HowItWork(){
 
 function Timelines({title, content, icon, classItem, right, position}){
     return(
-        <article className={`timeline-item px-4 text-white w-1/2 my-4 relative flex  ${classItem}`}>
+        <article data-aos="slide-up" className={`timeline-item px-4 text-white w-1/2 my-4 relative flex  ${classItem}`}>
             <div className={`timeline-item-content bg-[#1A1919] p-4 flex flex-col ${position} rounded-lg w-[25rem] m-w-[75%] relative shadow-[0px_4px_10px_0px_rgba(0,0,0,0.25)]`}>
                 <div className=""><i className={`fa-solid fa-${icon} text-4xl`}></i></div>
                 <h4 className="text-2xl font-bold text-primary-blue my-2">{title}</h4>
                 <p>{content}</p>
-                <span className={`block z-10 absolute bg-white border-2 border-primary-blue rounded-full h-5 w-5 ${right} top-[calc(50%-10px)]`}></span>
+                <span className={`block z-20 absolute bg-white border-2 border-primary-blue rounded-full h-5 w-5 ${right} top-[calc(50%-10px)]`}></span>
             </div>
         </article>
     )

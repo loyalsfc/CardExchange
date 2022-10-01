@@ -24,7 +24,7 @@ function Counter(){
 
 function CounterItem({number, text}){
     return(
-        <div className="text-white text-center mb-6 md:mb-0">
+        <div data-aos="slide-up" className="text-white text-center mb-6 md:mb-0">
             <h4 className="text-2xl font-medium">{number}+</h4>
             <p>{text}</p>
         </div>
