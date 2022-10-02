@@ -2,12 +2,13 @@ import Logo from "../assets/logo.svg"
 
 function Header(){
     function showNavBar(){
-        document.querySelector('.mobile-nav').classList.toggle('top-[-100vh]')
+        document.querySelector('.mobile-nav').classList.toggle('top-[-100vh]');
+        document.querySelector('.mobile-nav').classList.toggle('top-0');
     }
 
     return(
         <header className="px-2 sm:px-0 py-4">
-            <div className="mobile-nav fixed h-[100vh] top-0 z-10 top-[-100vh] w-full bg-gradient-to-b from-[#333333] to-[#090707] text-white centralize-items flex flex-col">
+            <div className="mobile-nav transition-all duration-200 fixed h-[100vh] z-10 top-[-100vh] w-full bg-gradient-to-b from-[#333333] to-[#090707] text-white centralize-items flex flex-col">
                 <NavLinks 
                     linksclass='flex-col text-center text-2xl'
                 />
