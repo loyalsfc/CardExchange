@@ -1,4 +1,5 @@
 import Logo from "../assets/logo.svg"
+import { Outlet, Link } from "react-router-dom"
 
 function Header(){
     function showNavBar(){
@@ -33,7 +34,9 @@ function NavLinks({navclass, linksclass, buttonclass}){
             <nav className={navclass}>
                 <ul className={`flex ${linksclass}`}>
                     <li className="mx-2 my-3 lg:my-0 hover:text-primary-blue cursor-pointer">Home</li>
-                    <li className="mx-2 my-3 lg:my-0 hover:text-primary-blue cursor-pointer">Rate</li>
+                    <li className="mx-2 my-3 lg:my-0 hover:text-primary-blue cursor-pointer">
+                        <Link to={`rates`}>Rate</Link>
+                    </li>
                     <li className="mx-2 my-3 lg:my-0 hover:text-primary-blue cursor-pointer">About Us</li>
                     <li className="mx-2 my-3 lg:my-0 hover:text-primary-blue cursor-pointer">Contact Us</li>
                     <li className="mx-2 my-6 lg:my-0 hover:text-primary-blue cursor-pointer">FAQ</li> 

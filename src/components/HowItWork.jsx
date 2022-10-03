@@ -2,7 +2,7 @@ function HowItWork(){
     return(
         <section className="py-8">
             <div className="container mx-auto">
-            <h2 className="text-3xl sm:text-4xl mb-4 text-center font-bold leading-[150%] w-3/4 mx-auto text-white">How it Works</h2>
+            <h2 className="section-title">How it Works</h2>
                 <div className="flex flex-col relative timeline-container">
                     <Timelines 
                         position="items-start text-left"

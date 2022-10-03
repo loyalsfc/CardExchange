@@ -12,6 +12,12 @@
   .dot{
     @apply cursor-pointer h-4 w-4 mx-1 bg-[#bbb] rounded-full inline-block
   }
+  .section-title{
+    @apply text-3xl sm:text-4xl mb-4 text-center font-bold leading-[150%] w-3/4 mx-auto text-white
+  }
+  .section-subtitle{
+    @apply leading-[150%] text-center w-3/4 mx-auto mb-4
+  }
 }
 
 .timeline-container:after {

@@ -1,15 +1,11 @@
 import { useEffect } from 'react'
-
+import Home from './pages/Home';
 import Header from './components/Header'
-import Hero from './components/Hero'
-import TrustUs from './components/Trust'
-import CardsWeBuy from './components/CardsWeBuy'
-import HowItWork from './components/HowItWork'
-import Counter from './components/Counters'
-import Testimonial from './components/Testimonial'
 import Footer from './components/Footer'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import{ createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-dom"
 
 function App() {
   useEffect(()=>{
@@ -19,12 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <TrustUs />
-      <CardsWeBuy />
-      <HowItWork />
-      <Counter />
-      <Testimonial />
+      <Home />
       <Footer />
     </div>
   )
