@@ -53,14 +53,10 @@ function Faq(){
 
 function Accordion({title, content, id}){
     function handleClick(e){
-        document.querySelectorAll('.accordion div').forEach(item => {item.classList.add('hidden')})
-        document.querySelectorAll('.accordion p').forEach(item => {item.classList.remove('scale-100')})
-        document.querySelectorAll('.accordion i').forEach(item => {item.classList.remove('rotate-180')})
-
         const selectedId = e.target.dataset.id;
-        setTimeout(()=>{document.querySelector(`#${selectedId} p`).classList.add('scale-100');}, 100)
-        document.querySelector(`#${selectedId} div`).classList.remove('hidden');
-        document.querySelector(`#${selectedId} i`).classList.add('rotate-180')
+        setTimeout(()=>{document.querySelector(`#${selectedId} p`).classList.toggle('scale-100');}, 100)
+        document.querySelector(`#${selectedId} div`).classList.toggle('hidden');
+        document.querySelector(`#${selectedId} i`).classList.toggle('rotate-180')
     }
     return(
         <div className="accordion" id={`dropdown-${id}`}>
