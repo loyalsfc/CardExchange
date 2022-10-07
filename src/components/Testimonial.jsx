@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 function Testimonial(){
     const [slideIndex, setSlideIndex] = useState(1)
-    // const slides = document.querySelector('slides')
     
     useEffect(()=>{
         showSlides(slideIndex);
@@ -16,7 +15,6 @@ function Testimonial(){
         let dots = document.getElementsByClassName("dot");
         if (n > slides.length) {setSlideIndex(1)}    
         if (n < 1) {setSlideIndex(slides.length)}
-        console.log(slides)
         for (i = 0; i < slides.length; i++) {
              console.log(slides[i].classList)
             slides[i].classList.add("hidden");    
@@ -24,7 +22,6 @@ function Testimonial(){
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" bg-[#717171]", "");
         }
-        // console.log(slides)
         slides[slideIndex-1].classList.remove('hidden');  
         dots[slideIndex-1].className += " bg-[#717171]";
     }

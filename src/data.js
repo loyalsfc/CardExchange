@@ -36,7 +36,7 @@ export default [
         enterValue: false
     },  
     {
-        NiKe: [{100: 44500}, {500: 223}], 
+        NiKe: [{100: 44500}, {500: 223000}], 
         enterValue: false
     },
     {

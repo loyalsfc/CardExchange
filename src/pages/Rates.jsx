@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -11,10 +12,12 @@ function Rates(){
     const [cardRate, setCardRate] = useState(0);
     const [cardNaira, setCardNaira] = useState(0);
     const [inputMode, setInputMode] = useState(false);
-    const qtyInput = useRef()
+    const [inputValue, setInputValue] = useState(1);
+    const qtyInput = useRef();
 
     const handleChange = (event) => {        
         setCardRate(0)
+        setInputValue(1)
         const index = event.target.value
         for (const key in Cards[index]) {
             if (Object.hasOwnProperty.call(Cards[index], key)) {
@@ -25,12 +28,13 @@ function Rates(){
                 setGiftCard(key)
             }
         }
-        setCardRate(0)
+        // setCardRate(0)
+        // setInputValue(1)
     }
 
     useEffect(() => {
-        setCardNaira(cardRate * 1)
-    }, [cardRate])
+        setCardNaira(cardRate * inputValue)
+    }, [cardRate, inputValue ])
 
     const setRate = (event) => {
         setCardValue(event.target.value)
@@ -46,6 +50,10 @@ function Rates(){
         nameofCard.pop();
         return <option value={index} key={index}>{nameofCard}</option>
     })
+
+    const setChange = (e) =>{
+        setInputValue(e.target.value)
+    }
 
     return(
         <>
@@ -67,10 +75,18 @@ function Rates(){
                         </select>
                     </div>
                     <div className="bg-white w-3/4 rounded-lg px-3 py-4 mx-auto mb-4">
-                        <input type="number" ref={qtyInput} disabled className="w-full focus:outline-0 bg-transparent disabled:bg-[#eee]" />
+                        <input 
+                        type="number" 
+                        ref={qtyInput} 
+                        disabled={inputMode ? false : true} 
+                        onChange={setChange}
+                        className="w-full focus:outline-0 bg-transparent disabled:bg-[#eee]" 
+                        value={inputValue}
+                    />
                     </div>
-                    <h3 className="text-center text-white mt-8">Cash in Naira</h3>
+                    <h3 className="text-center text-white mt-8 mb-4 text-2xl">Cash in Naira</h3>
                     <p className="text-6xl text-center text-white font-bold">₦{cardNaira}</p>
+                    <p className="text-white text-center text-lg mt-8">Click <span className="text-primary-blue"><Link to="create-account">here</Link></span> to create an account to start trading </p>
                 </div>
             </main>
                 
