@@ -54,7 +54,7 @@ function Faq(){
 function Accordion({title, content, id}){
     function handleClick(e){
         const selectedId = e.target.dataset.id;
-        setTimeout(()=>{document.querySelector(`#${selectedId} p`).classList.toggle('scale-100');}, 100)
+        setTimeout(()=>{document.querySelector(`#${selectedId} p`).classList.toggle('scale-0');}, 100)
         document.querySelector(`#${selectedId} div`).classList.toggle('hidden');
         document.querySelector(`#${selectedId} i`).classList.toggle('rotate-180')
     }
