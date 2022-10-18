@@ -18,6 +18,9 @@
   .section-subtitle{
     @apply leading-[150%] text-center w-3/4 mx-auto mb-4
   }
+  .privacy-title{
+    @apply text-2xl mb-4 mt-10 font-bold
+  }
 }
 
 .timeline-container:after {

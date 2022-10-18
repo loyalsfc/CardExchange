@@ -6,6 +6,8 @@ import Rates from '../src/pages/Rates'
 import ErrorPage from './Error-page'
 import Faq from '../src/pages/FAQ'
 import './index.css'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
   {
     path: "FAQ",
     element: <Faq />
+  },
+  {
+    path: "privacy",
+    element: <Privacy />
+  },
+  {
+    path: "terms",
+    element: <Terms />
   }
 ])
 
