@@ -8,6 +8,7 @@ import Faq from '../src/pages/FAQ'
 import './index.css'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
+import Contact from './pages/Contact'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "terms",
     element: <Terms />
+  },
+  {
+    path: 'contact',
+    element: <Contact />
   }
 ])
 

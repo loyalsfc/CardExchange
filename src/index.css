@@ -21,6 +21,9 @@
   .privacy-title{
     @apply text-2xl mb-4 mt-10 font-bold
   }
+  .contact-input{
+    @apply h-full bg-transparent focus:outline-0 w-full
+  }
 }
 
 .timeline-container:after {

@@ -40,7 +40,9 @@ function NavLinks({navclass, linksclass, buttonclass}){
                         <Link to={`/rates`}>Rate</Link>
                     </li>
                     <li className="mx-2 my-3 lg:my-0 hover:text-primary-blue cursor-pointer">About Us</li>
-                    <li className="mx-2 my-3 lg:my-0 hover:text-primary-blue cursor-pointer">Contact Us</li>
+                    <li className="mx-2 my-3 lg:my-0 hover:text-primary-blue cursor-pointer">
+                        <Link to="/contact"> Contact Us </Link>
+                    </li>
                     <li className="mx-2 my-6 lg:my-0 hover:text-primary-blue cursor-pointer">
                         <Link to="/FAQ">FAQ</Link>
                     </li> 

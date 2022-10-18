@@ -9,6 +9,10 @@ module.exports = {
       colors: {
         'primary-blue': '#3775ED',
       },
+      listStyleType: {
+        square: 'square',
+        roman: 'upper-roman',
+      }
     },
   },
   plugins: [],

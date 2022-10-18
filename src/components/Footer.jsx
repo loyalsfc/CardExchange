@@ -8,7 +8,7 @@ function Footer(){
                 <Link to="/"><img src={Logo} className="mb-4" /></Link>
                 <ul className='cursor-pointer mb-4 text-lg'>
                     <li className='font-bold mb-2'>Quick Links</li>
-                    <li>About Us</li>
+                    <li> <Link to="/contact">Contact Us</Link></li>
                     <li><Link to="/terms">Terms</Link></li>
                     <li><Link to="/privacy"> Privacy Policy </Link></li>
                     <li><Link to="/FAQ"> FAQS </Link></li>
